@@ -44,6 +44,7 @@
             // 
             // panelLogin
             // 
+            panelLogin.BackColor = Color.FromArgb(30, 50, 100);
             panelLogin.Controls.Add(labelLogin);
             resources.ApplyResources(panelLogin, "panelLogin");
             panelLogin.Name = "panelLogin";
@@ -108,7 +109,7 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.WindowFrame;
+            BackColor = Color.FromArgb(20, 30, 60);
             Controls.Add(chbMostrar);
             Controls.Add(txtUsuario);
             Controls.Add(btnIngresar);

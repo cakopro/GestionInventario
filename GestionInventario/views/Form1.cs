@@ -8,8 +8,6 @@ namespace GestionInventario
         public FormLogin()
         {
             InitializeComponent();
-            panelLogin.BackColor = Color.FromArgb(30, 50, 100);
-            this.BackColor = Color.FromArgb(20, 30, 60);
         }
 
         private void Form1_Load(object sender, EventArgs e)
