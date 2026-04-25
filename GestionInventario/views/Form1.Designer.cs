@@ -48,6 +48,7 @@
             panelLogin.Controls.Add(labelLogin);
             resources.ApplyResources(panelLogin, "panelLogin");
             panelLogin.Name = "panelLogin";
+            panelLogin.Paint += panelLogin_Paint;
             // 
             // labelLogin
             // 

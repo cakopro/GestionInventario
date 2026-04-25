@@ -61,5 +61,10 @@ namespace GestionInventario
         {
             txtContrasena.UseSystemPasswordChar = !chbMostrar.Checked;
         }
+
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
