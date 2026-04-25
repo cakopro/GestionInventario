@@ -33,7 +33,7 @@ namespace GestionInventario
                 }
             }
             ventanaHijo.TopLevel = false;
-            ventanaHijo.FormBorderStyle = FormBorderStyle.None; 
+            ventanaHijo.FormBorderStyle = FormBorderStyle.None;
             ventanaHijo.Dock = DockStyle.Fill;
 
             this.panelContenedor.Controls.Add(ventanaHijo);
@@ -54,6 +54,11 @@ namespace GestionInventario
                 repo.agregar(new Proveedores(0, "cakito", "+56942819876", "cakoo@gmail.com", "cakorps", "Direccion 1"));
                 repo.agregar(new Proveedores(1, "joaquin", "+56942819877", "koku@gmail.com", "Umbrella", "Direccion 2"));
             }
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            abrirNuevoPanel(new VentasRE());
         }
     }
 }

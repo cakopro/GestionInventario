@@ -24,7 +24,7 @@ namespace GestionInventario
         {
 
         }
-//holaaa??
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContrasena.Text))

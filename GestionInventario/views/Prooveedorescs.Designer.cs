@@ -50,11 +50,12 @@
             dataProveedores.AllowUserToDeleteRows = false;
             dataProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataProveedores.Columns.AddRange(new DataGridViewColumn[] { Id, nombre, telefono, correo, empresa, direccion });
-            dataProveedores.Location = new Point(31, 233);
+            dataProveedores.Location = new Point(19, 146);
+            dataProveedores.Margin = new Padding(2, 2, 2, 2);
             dataProveedores.Name = "dataProveedores";
             dataProveedores.ReadOnly = true;
             dataProveedores.RowHeadersWidth = 82;
-            dataProveedores.Size = new Size(1087, 596);
+            dataProveedores.Size = new Size(669, 372);
             dataProveedores.TabIndex = 0;
             dataProveedores.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -122,36 +123,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 63);
+            label1.Font = new Font("Microsoft Sans Serif", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(13, 39);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(193, 36);
+            label1.Size = new Size(118, 24);
             label1.TabIndex = 1;
             label1.Text = "Proveedores";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(31, 170);
+            label2.Font = new Font("Microsoft Sans Serif", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(19, 106);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(275, 36);
+            label2.Size = new Size(165, 24);
             label2.TabIndex = 2;
             label2.Text = "Buscar proveedor:";
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(303, 171);
+            txtBuscar.Location = new Point(186, 107);
+            txtBuscar.Margin = new Padding(2, 2, 2, 2);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(641, 39);
+            txtBuscar.Size = new Size(396, 27);
             txtBuscar.TabIndex = 3;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(978, 166);
+            btnBuscar.Location = new Point(602, 104);
+            btnBuscar.Margin = new Padding(2, 2, 2, 2);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(140, 49);
+            btnBuscar.Size = new Size(86, 31);
             btnBuscar.TabIndex = 4;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
@@ -159,9 +164,10 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(1131, 318);
+            btnAgregar.Location = new Point(696, 199);
+            btnAgregar.Margin = new Padding(2, 2, 2, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(150, 46);
+            btnAgregar.Size = new Size(92, 29);
             btnAgregar.TabIndex = 5;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -169,9 +175,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(1131, 386);
+            button2.Location = new Point(696, 241);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(150, 46);
+            button2.Size = new Size(92, 29);
             button2.TabIndex = 6;
             button2.Text = "Editar";
             button2.UseVisualStyleBackColor = true;
@@ -179,9 +186,10 @@
             // 
             // button3
             // 
-            button3.Location = new Point(1131, 451);
+            button3.Location = new Point(696, 282);
+            button3.Margin = new Padding(2, 2, 2, 2);
             button3.Name = "button3";
-            button3.Size = new Size(150, 46);
+            button3.Size = new Size(92, 29);
             button3.TabIndex = 7;
             button3.Text = "Eliminar";
             button3.UseVisualStyleBackColor = true;
@@ -189,10 +197,10 @@
             // 
             // Prooveedorescs
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1293, 894);
+            ClientSize = new Size(796, 559);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(btnAgregar);
@@ -201,6 +209,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dataProveedores);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Prooveedorescs";
             Text = "Prooveedorescs";
             ((System.ComponentModel.ISupportInitialize)dataProveedores).EndInit();
