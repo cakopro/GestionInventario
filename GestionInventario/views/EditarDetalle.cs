@@ -36,7 +36,7 @@ namespace GestionInventario.views
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            btnGuardar_Click(sender, e); // reutiliza tu botón guardar
+            btnGuardar_Click(sender, e);
         }
     }
 }
