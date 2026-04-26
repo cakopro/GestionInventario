@@ -7,7 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+//Wena
 namespace GestionInventario
 {
     public partial class Principal : Form
