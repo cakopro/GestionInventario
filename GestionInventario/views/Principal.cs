@@ -7,7 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-//Wena
+
 namespace GestionInventario
 {
     public partial class Principal : Form
@@ -59,6 +59,11 @@ namespace GestionInventario
         private void btnVentas_Click(object sender, EventArgs e)
         {
             abrirNuevoPanel(new VentasRE());
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            abrirNuevoPanel(new FormProductos());
         }
     }
 }
