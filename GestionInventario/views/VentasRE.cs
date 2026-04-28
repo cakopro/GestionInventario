@@ -10,16 +10,29 @@ namespace GestionInventario.views
     {
         List<DetalleVenta> detallesActuales = new List<DetalleVenta>();
         List<Venta> listaVentas = new List<Venta>();
+        List<ProductoFinal> catalogo = new List<ProductoFinal>(); 
 
         public VentasRE()
         {
             InitializeComponent();
+            cargarCatalogo();
         }
 
         void ActualizarDetalle()
         {
             dgvDetalle.DataSource = null;
             dgvDetalle.DataSource = detallesActuales;
+        }
+
+        void cargarCatalogo()
+        {
+            //catologo para tener productos que vender . estos tienen una lista de ingredientes la cual esta previamente creada en ventana princ
+            catalogo.Add(new ProductoFinal(1,"Especial", 3500, new List<string> { "pan", "vienesa" }));
+            catalogo.Add(new ProductoFinal(2,"Hamburguesa con queso", 4500, new List<string> { "pan hamburguesa", "hamburguesa", "queso" }));
+            cmbProductos.DataSource = catalogo;
+            cmbProductos.DisplayMember = "Nombre";
+            txtPrecio.ReadOnly = true;
+            txtPrecio.BackColor = System.Drawing.Color.LightGray;
         }
 
         void CalcularTotal()
@@ -45,7 +58,8 @@ namespace GestionInventario.views
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-            if (txtProducto.Text == "" || txtPrecio.Text == "" || txtCantidad.Text == "")
+            //valida que se seleciones algo en cmb y que no este vacio cantidad. precio no se ingresa oslo se muestra
+            if (cmbProductos.SelectedItem == null || string.IsNullOrWhiteSpace(txtCantidad.Text))
             {
                 MessageBox.Show("Completa todos los campos");
                 return;
@@ -53,11 +67,26 @@ namespace GestionInventario.views
 
             try
             {
+                //instancia un producto final en base a lo seleccionado en cmb
+                ProductoFinal platoSeleccionado = (ProductoFinal)cmbProductos.SelectedItem;
+                int cantidadPedida = int.Parse(txtCantidad.Text);
+                //crea una lista de productos en la cual ya viene los productos creados debido a que es static y los datos no cambiar
+                RepositorioProductos repoP = new RepositorioProductos();
+                var listaInsumosGlobal = repoP.obtenerTodo();//obtine todo
+                //reccore la lista de ingredientes de nuestro plato seleccionado en cmb o sea si tomas especial solo recorre su lista de ingredientes
+                foreach (string nombreIngrediente in platoSeleccionado.Ingredientes) { 
+                    //aca se descuenta cantidad al insumo basado en el ingrediente que este o sea se mete a lista ingredientes saca ejemplo: queso
+                    //ahora busca en la lista global de productos el insumo con el mismo nombre y si lo encuentra le resta.
+                    var insumo = listaInsumosGlobal.Find(i => i.Nombre.Equals(nombreIngrediente, StringComparison.OrdinalIgnoreCase));
+                    if (insumo != null) { 
+                        insumo.Cantidad -= cantidadPedida;
+                    }
+                }
                 DetalleVenta d = new DetalleVenta()
                 {
-                    Producto = txtProducto.Text,
-                    Precio = double.Parse(txtPrecio.Text),
-                    Cantidad = int.Parse(txtCantidad.Text)
+                    Producto = platoSeleccionado.Nombre,
+                    Precio = platoSeleccionado.Precio,
+                    Cantidad = cantidadPedida
                 };
 
                 detallesActuales.Add(d);
@@ -65,13 +94,11 @@ namespace GestionInventario.views
                 ActualizarDetalle();
                 CalcularTotal();
 
-                txtProducto.Clear();
-                txtPrecio.Clear();
                 txtCantidad.Clear();
             }
             catch
             {
-                MessageBox.Show("Ingresa valores numéricos válidos");
+                MessageBox.Show("la cantidad debe ser un numero válido");
             }
         }
 
@@ -153,5 +180,18 @@ namespace GestionInventario.views
             }
         }
 
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //dependiendo de lo que selecciones en cmb se pondra uj precio o otro
+            if (cmbProductos.SelectedItem is ProductoFinal seleccionado)
+            {
+                txtPrecio.Text = seleccionado.Precio.ToString();
+            }
+        }
     }
 }

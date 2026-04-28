@@ -39,17 +39,19 @@
             // dgvProductos
             // 
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.Location = new Point(42, 74);
+            dgvProductos.Location = new Point(68, 104);
+            dgvProductos.Margin = new Padding(5);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersWidth = 51;
-            dgvProductos.Size = new Size(842, 345);
+            dgvProductos.Size = new Size(1215, 552);
             dgvProductos.TabIndex = 0;
             // 
             // btnEditarProducto
             // 
-            btnEditarProducto.Location = new Point(402, 456);
+            btnEditarProducto.Location = new Point(357, 690);
+            btnEditarProducto.Margin = new Padding(5);
             btnEditarProducto.Name = "btnEditarProducto";
-            btnEditarProducto.Size = new Size(94, 29);
+            btnEditarProducto.Size = new Size(153, 46);
             btnEditarProducto.TabIndex = 12;
             btnEditarProducto.Text = "Editar";
             btnEditarProducto.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // btnEliminarProducto
             // 
-            btnEliminarProducto.Location = new Point(568, 456);
+            btnEliminarProducto.Location = new Point(555, 690);
+            btnEliminarProducto.Margin = new Padding(5);
             btnEliminarProducto.Name = "btnEliminarProducto";
-            btnEliminarProducto.Size = new Size(94, 29);
+            btnEliminarProducto.Size = new Size(153, 46);
             btnEliminarProducto.TabIndex = 13;
             btnEliminarProducto.Text = "Eliminar";
             btnEliminarProducto.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // btnNuevoProducto
             // 
-            btnNuevoProducto.Location = new Point(253, 456);
+            btnNuevoProducto.Location = new Point(162, 690);
+            btnNuevoProducto.Margin = new Padding(5);
             btnNuevoProducto.Name = "btnNuevoProducto";
-            btnNuevoProducto.Size = new Size(94, 29);
+            btnNuevoProducto.Size = new Size(153, 46);
             btnNuevoProducto.TabIndex = 15;
             btnNuevoProducto.Text = "Nuevo";
             btnNuevoProducto.UseVisualStyleBackColor = true;
@@ -79,22 +83,24 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(42, 32);
+            label1.Location = new Point(68, 51);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(100, 25);
+            label1.Size = new Size(138, 37);
             label1.TabIndex = 16;
-            label1.Text = "Productos";
+            label1.Text = "Insumos";
             // 
             // FormProductos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(975, 589);
+            ClientSize = new Size(1370, 894);
             Controls.Add(label1);
             Controls.Add(btnNuevoProducto);
             Controls.Add(btnEliminarProducto);
             Controls.Add(btnEditarProducto);
             Controls.Add(dgvProductos);
+            Margin = new Padding(5);
             Name = "FormProductos";
             Text = "FormProductos";
             Load += FormProductos_Load;

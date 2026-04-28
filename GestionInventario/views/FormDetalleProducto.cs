@@ -81,7 +81,7 @@ namespace GestionInventario.views
                     }
 
                     repoProductos.agregar(nuevoProducto);
-                    MessageBox.Show("Producto agregado con exito.");
+                    MessageBox.Show("Insumo agregado con exito.");
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace GestionInventario.views
                         productoAEditar.ProveedorAsociado = "Sin proveedor";
                     }
 
-                    MessageBox.Show("Producto actualizado con exito.");
+                    MessageBox.Show("Insumo actualizado con exito.");
                 }
 
                 this.Close();
@@ -163,7 +163,7 @@ namespace GestionInventario.views
                     }
 
                     repoProductos.agregar(nuevoProducto);
-                    MessageBox.Show("Producto agregado con exito.");
+                    MessageBox.Show("Insumo agregado con exito.");
                 }
                 else
                 {
@@ -182,7 +182,7 @@ namespace GestionInventario.views
                         productoAEditar.ProveedorAsociado = "Sin proveedor";
                     }
 
-                    MessageBox.Show("Producto actualizado con exito.");
+                    MessageBox.Show("Insumo actualizado con exito.");
                 }
 
                 this.Close(); 

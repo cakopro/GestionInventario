@@ -48,11 +48,21 @@ namespace GestionInventario
         private void InicializarDatos()
         {
             RepositorioProveedores repo = new RepositorioProveedores();
-
+            RepositorioProductos repoP = new RepositorioProductos();
             if (repo.obtenerTodo().Count == 0)
             {
                 repo.agregar(new Proveedores(0, "cakito", "+56942819876", "cakoo@gmail.com", "cakorps", "Direccion 1"));
                 repo.agregar(new Proveedores(1, "joaquin", "+56942819877", "koku@gmail.com", "Umbrella", "Direccion 2"));
+            }
+            if (repoP.obtenerTodo().Count == 0)
+            {
+                repoP.agregar(new Producto(0, "vienesa", 2500, 25, "cakito", DateTime.Now));
+                repoP.agregar(new Producto(1, "pan", 1000, 10, "cakito", DateTime.Now));
+                repoP.agregar(new Producto(2, "pan Hamburguesa", 1000, 10, "cakito", DateTime.Now));
+                repoP.agregar(new Producto(3, "queso", 1000, 10, "cakito", DateTime.Now));
+                repoP.agregar(new Producto(4, "hamburguesa", 1000, 10, "cakito", DateTime.Now));
+
+
             }
         }
 
@@ -64,6 +74,13 @@ namespace GestionInventario
         private void btnProductos_Click(object sender, EventArgs e)
         {
             abrirNuevoPanel(new FormProductos());
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            FormLogin ventana = new FormLogin();
+            ventana.Show();
+            this.Dispose();
         }
     }
 }

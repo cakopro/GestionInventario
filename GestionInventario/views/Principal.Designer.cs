@@ -49,9 +49,8 @@
             panelMenu.Controls.Add(btnProveedores);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
-            panelMenu.Margin = new Padding(2);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(190, 647);
+            panelMenu.Size = new Size(309, 1035);
             panelMenu.TabIndex = 0;
             // 
             // btnVolver
@@ -61,17 +60,16 @@
             btnVolver.FlatStyle = FlatStyle.Flat;
             btnVolver.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = Color.White;
-            btnVolver.Image = Properties.Resources.proveedor;
-            btnVolver.ImageAlign = ContentAlignment.TopLeft;
-            btnVolver.Location = new Point(15, 335);
-            btnVolver.Margin = new Padding(2);
+            btnVolver.Image = Properties.Resources.volver;
+            btnVolver.Location = new Point(24, 536);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(163, 64);
+            btnVolver.Size = new Size(207, 102);
             btnVolver.TabIndex = 3;
             btnVolver.Text = "Volver";
             btnVolver.TextAlign = ContentAlignment.MiddleLeft;
             btnVolver.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // btnVentas
             // 
@@ -80,15 +78,12 @@
             btnVentas.FlatStyle = FlatStyle.Flat;
             btnVentas.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVentas.ForeColor = Color.White;
-            btnVentas.Image = Properties.Resources.proveedor;
-            btnVentas.ImageAlign = ContentAlignment.TopLeft;
-            btnVentas.Location = new Point(15, 268);
-            btnVentas.Margin = new Padding(2);
+            btnVentas.Image = Properties.Resources.ventas;
+            btnVentas.Location = new Point(24, 429);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(163, 63);
+            btnVentas.Size = new Size(207, 101);
             btnVentas.TabIndex = 2;
             btnVentas.Text = "Ventas";
-            btnVentas.TextAlign = ContentAlignment.MiddleLeft;
             btnVentas.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click;
@@ -100,14 +95,12 @@
             btnProductos.FlatStyle = FlatStyle.Flat;
             btnProductos.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProductos.ForeColor = Color.White;
-            btnProductos.Image = Properties.Resources.proveedor;
-            btnProductos.ImageAlign = ContentAlignment.TopLeft;
-            btnProductos.Location = new Point(15, 201);
-            btnProductos.Margin = new Padding(2);
+            btnProductos.Image = Properties.Resources.insumos;
+            btnProductos.Location = new Point(24, 322);
             btnProductos.Name = "btnProductos";
-            btnProductos.Size = new Size(163, 63);
+            btnProductos.Size = new Size(207, 101);
             btnProductos.TabIndex = 1;
-            btnProductos.Text = "Productos";
+            btnProductos.Text = "Insumos";
             btnProductos.TextAlign = ContentAlignment.MiddleLeft;
             btnProductos.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProductos.UseVisualStyleBackColor = true;
@@ -121,11 +114,9 @@
             btnProveedores.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProveedores.ForeColor = Color.White;
             btnProveedores.Image = Properties.Resources.proveedor;
-            btnProveedores.ImageAlign = ContentAlignment.TopLeft;
-            btnProveedores.Location = new Point(15, 122);
-            btnProveedores.Margin = new Padding(2);
+            btnProveedores.Location = new Point(24, 195);
             btnProveedores.Name = "btnProveedores";
-            btnProveedores.Size = new Size(163, 63);
+            btnProveedores.Size = new Size(265, 101);
             btnProveedores.TabIndex = 0;
             btnProveedores.Text = "Proveedores";
             btnProveedores.TextAlign = ContentAlignment.MiddleLeft;
@@ -137,10 +128,9 @@
             // 
             panelLogo.BackColor = Color.FromArgb(20, 30, 60);
             panelLogo.Dock = DockStyle.Top;
-            panelLogo.Location = new Point(190, 0);
-            panelLogo.Margin = new Padding(2);
+            panelLogo.Location = new Point(309, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(859, 44);
+            panelLogo.Size = new Size(1396, 70);
             panelLogo.TabIndex = 1;
             // 
             // panelContenedor
@@ -149,31 +139,28 @@
             panelContenedor.Controls.Add(button2);
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panelContenedor.Location = new Point(190, 44);
-            panelContenedor.Margin = new Padding(2);
+            panelContenedor.Location = new Point(309, 70);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(859, 603);
+            panelContenedor.Size = new Size(1396, 965);
             panelContenedor.TabIndex = 2;
             // 
             // button2
             // 
-            button2.Location = new Point(606, 377);
-            button2.Margin = new Padding(2);
+            button2.Location = new Point(985, 603);
             button2.Name = "button2";
-            button2.Size = new Size(5, 5);
+            button2.Size = new Size(8, 8);
             button2.TabIndex = 0;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1049, 647);
+            ClientSize = new Size(1705, 1035);
             Controls.Add(panelContenedor);
             Controls.Add(panelLogo);
             Controls.Add(panelMenu);
-            Margin = new Padding(2);
             Name = "Principal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal";

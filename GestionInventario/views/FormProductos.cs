@@ -49,18 +49,18 @@ namespace GestionInventario.views
                 int id = (int)dgvProductos.CurrentRow.Cells[0].Value;
 
 
-                DialogResult respuesta = MessageBox.Show("¿Seguro que deseas eliminar este producto?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult respuesta = MessageBox.Show("¿Seguro que deseas eliminar este Insumo?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (respuesta == DialogResult.Yes)
                 {
                     repoProductos.eliminar(id);
                     ActualizarTabla();
-                    MessageBox.Show("Producto eliminado con exito.");
+                    MessageBox.Show("Insumo eliminado con exito.");
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, selecciona un producto de la tabla para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, selecciona un Insumo de la tabla para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -82,7 +82,7 @@ namespace GestionInventario.views
             }
             else
             {
-                MessageBox.Show("Por favor, selecciona un producto de la tabla para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, selecciona un Insumo de la tabla para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

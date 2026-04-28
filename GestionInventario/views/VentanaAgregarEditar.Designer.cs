@@ -130,39 +130,61 @@
             // 
             // txtNombre
             // 
+            txtNombre.ForeColor = Color.Gray;
             txtNombre.Location = new Point(51, 198);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(479, 39);
             txtNombre.TabIndex = 7;
+            txtNombre.Text = "Nombre proveedor";
+            txtNombre.Enter += txtNombre_Enter;
+            txtNombre.Leave += txtNombre_Leave;
             // 
             // txtTelefono
             // 
+            txtTelefono.ForeColor = Color.Gray;
             txtTelefono.Location = new Point(51, 287);
+            txtTelefono.MaxLength = 15;
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(479, 39);
             txtTelefono.TabIndex = 8;
+            txtTelefono.Text = "+56 9 1234 5678";
+            txtTelefono.Enter += txtTelefono_Enter;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
+            txtTelefono.Leave += txtTelefono_Leave;
             // 
             // txtCorreo
             // 
+            txtCorreo.ForeColor = Color.Gray;
             txtCorreo.Location = new Point(51, 386);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(479, 39);
             txtCorreo.TabIndex = 9;
+            txtCorreo.Text = "ejemplo@empresa.com";
             txtCorreo.TextChanged += textBox3_TextChanged;
+            txtCorreo.Enter += txtCorreo_Enter;
+            txtCorreo.Leave += txtCorreo_Leave;
             // 
             // txtEmpresa
             // 
+            txtEmpresa.ForeColor = Color.Gray;
             txtEmpresa.Location = new Point(51, 482);
             txtEmpresa.Name = "txtEmpresa";
             txtEmpresa.Size = new Size(479, 39);
             txtEmpresa.TabIndex = 10;
+            txtEmpresa.Text = "Distribuidora Gastronómica";
+            txtEmpresa.Enter += txtEmpresa_Enter;
+            txtEmpresa.Leave += txtEmpresa_Leave;
             // 
             // txtDireccion
             // 
+            txtDireccion.ForeColor = Color.Gray;
             txtDireccion.Location = new Point(56, 587);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(479, 39);
             txtDireccion.TabIndex = 11;
+            txtDireccion.Text = "Av. Principal 123, Ciudad";
+            txtDireccion.Enter += txtDireccion_Enter;
+            txtDireccion.Leave += txtDireccion_Leave;
             // 
             // VentanaAgregarEditar
             // 
